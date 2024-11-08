@@ -1,0 +1,266 @@
+/* Universal Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Body and Home Layout */
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  color: #2a2a2a;
+  background-color: #f9f9fb;
+}
+
+/* Home Page Layout */
+.home {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #ffedd5, #e0f7fa); /* Light orange to blue gradient */
+}
+
+/* Sidebar Styling */
+.submenu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 260px;
+  background-color: #ffffff;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 2px 0 15px rgba(0, 0, 0, 0.08);
+}
+
+.submenu a {
+  color: #ff7043; /* Warm orange */
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  width: 100%;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+.submenu a:hover {
+  background-color: #ffccbc; /* Soft orange on hover */
+  color: #bf360c; /* Darker orange */
+}
+
+.submenu a.active {
+  background-color: #ff7043;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Main Content */
+.cont {
+  flex: 1;
+  width: 100%;
+  padding: 5px;
+  overflow-y: auto;
+  background-color: #f5f8fa;
+  border-top: 1px solid #ddd;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background-color: #c3e0e5;
+  padding: 1rem 2rem;
+  color: #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+.abcd{
+  color: #00796b;
+  font-size: 1.3rem;
+  padding: 1rem 2rem;
+  
+}
+
+nav a {
+  color: #00796b;
+  text-decoration: none;
+  font-size: 1.3rem;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #001410;
+}
+
+nav div {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Post Section */
+.postcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem;
+  background-color: #f9f9fb;
+}
+
+.post {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  max-width: 800px;
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 1.75rem ;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.post:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.post h1 {
+  color: #00796b;
+  font-size: 1.7rem;
+  margin-bottom: 0.5rem;
+}
+
+.post p {
+  color: #555;
+  line-height: 1.6;
+}
+
+.pfoot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* Form Styling */
+.formcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f4f7;
+}
+
+.form {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2.5rem;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.msg {
+  color: #d84315; /* Warm red for error messages */
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+input[type='text'],
+input[type='password'] {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.2s ease;
+}
+
+input[type='text']:focus,
+input[type='password']:focus {
+  border-color: #ff7043;
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e64a19;
+}
+
+/* Add Post Section */
+select,
+textarea {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 0.75rem;
+  width: 100%;
+  margin: 10px 0;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+option {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column;
+  }
+
+  .submenu {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .submenu a {
+    margin: 0 0.5rem;
+  }
+
+  .cont {
+    padding: 1.5rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  nav a {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+  }
+
+  nav div {
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+  }
+}
